@@ -19,23 +19,29 @@
 
 package org.geometerplus.android.fbreader.network;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Locale;
+import java.util.TreeSet;
+
+import org.geometerplus.android.fbreader.covers.CoverManager;
+import org.geometerplus.android.fbreader.util.AndroidImageSynchronizer;
+import org.geometerplus.android.util.ViewUtil;
+import org.geometerplus.fbreader.network.INetworkLink;
+import org.geometerplus.fbreader.network.NetworkLibrary;
+import org.geometerplus.fbreader.network.NetworkTree;
 
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.*;
-import android.widget.*;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
+import android.widget.ImageView;
 
+import com.cmmobi.reader.R;
 import com.mobeta.android.dslv.DragSortListView;
-
-import org.geometerplus.zlibrary.ui.android.R;
-import org.geometerplus.fbreader.network.*;
-import org.geometerplus.android.fbreader.FBReader;
-import org.geometerplus.android.fbreader.covers.CoverManager;
-
-import org.geometerplus.android.util.ViewUtil;
-import org.geometerplus.android.fbreader.util.AndroidImageSynchronizer;
 
 public class CatalogManagerActivity extends ListActivity {
 	private final AndroidImageSynchronizer myImageSynchronizer = new AndroidImageSynchronizer(this);

@@ -19,30 +19,48 @@
 
 package org.geometerplus.android.fbreader.library;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.LinkedList;
+import java.util.List;
 
-import android.app.AlertDialog;
-import android.app.SearchManager;
-import android.content.*;
-import android.os.Bundle;
-import android.view.*;
-import android.widget.AdapterView;
-import android.widget.ListView;
-
-import org.geometerplus.zlibrary.core.options.ZLStringOption;
-import org.geometerplus.zlibrary.core.resources.ZLResource;
-
-import org.geometerplus.zlibrary.ui.android.R;
-
-import org.geometerplus.fbreader.book.*;
-import org.geometerplus.fbreader.library.*;
-import org.geometerplus.fbreader.tree.FBTree;
-
-import org.geometerplus.android.util.*;
-import org.geometerplus.android.fbreader.*;
+import org.geometerplus.android.fbreader.FBReader;
+import org.geometerplus.android.fbreader.FBUtil;
+import org.geometerplus.android.fbreader.OrientationUtil;
 import org.geometerplus.android.fbreader.api.FBReaderIntents;
 import org.geometerplus.android.fbreader.libraryService.BookCollectionShadow;
 import org.geometerplus.android.fbreader.tree.TreeActivity;
+import org.geometerplus.android.util.DeviceType;
+import org.geometerplus.android.util.SearchDialogUtil;
+import org.geometerplus.android.util.UIUtil;
+import org.geometerplus.fbreader.book.Book;
+import org.geometerplus.fbreader.book.BookEvent;
+import org.geometerplus.fbreader.book.BookUtil;
+import org.geometerplus.fbreader.book.Filter;
+import org.geometerplus.fbreader.book.IBookCollection;
+import org.geometerplus.fbreader.library.BookTree;
+import org.geometerplus.fbreader.library.FileTree;
+import org.geometerplus.fbreader.library.LibraryTree;
+import org.geometerplus.fbreader.library.RootTree;
+import org.geometerplus.fbreader.library.SearchResultsTree;
+import org.geometerplus.fbreader.library.SyncLabelTree;
+import org.geometerplus.fbreader.tree.FBTree;
+import org.geometerplus.zlibrary.core.options.ZLStringOption;
+import org.geometerplus.zlibrary.core.resources.ZLResource;
+
+import android.app.AlertDialog;
+import android.app.SearchManager;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.ContextMenu;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ListView;
+
+import com.cmmobi.reader.R;
 
 public class LibraryActivity extends TreeActivity<LibraryTree> implements MenuItem.OnMenuItemClickListener, View.OnCreateContextMenuListener, IBookCollection.Listener {
 	static final String START_SEARCH_ACTION = "action.fbreader.library.start-search";

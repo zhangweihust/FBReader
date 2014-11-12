@@ -21,7 +21,32 @@ package org.geometerplus.android.fbreader.library;
 
 import java.io.File;
 import java.text.DateFormat;
-import java.util.*;
+import java.util.Date;
+import java.util.HashSet;
+import java.util.List;
+
+import org.geometerplus.android.fbreader.FBReader;
+import org.geometerplus.android.fbreader.OrientationUtil;
+import org.geometerplus.android.fbreader.api.FBReaderIntents;
+import org.geometerplus.android.fbreader.libraryService.BookCollectionShadow;
+import org.geometerplus.android.fbreader.preferences.EditBookInfoActivity;
+import org.geometerplus.android.fbreader.util.AndroidImageSynchronizer;
+import org.geometerplus.fbreader.book.Author;
+import org.geometerplus.fbreader.book.Book;
+import org.geometerplus.fbreader.book.BookEvent;
+import org.geometerplus.fbreader.book.BookUtil;
+import org.geometerplus.fbreader.book.IBookCollection;
+import org.geometerplus.fbreader.book.SeriesInfo;
+import org.geometerplus.fbreader.book.Tag;
+import org.geometerplus.fbreader.network.HtmlUtil;
+import org.geometerplus.zlibrary.core.filesystem.ZLPhysicalFile;
+import org.geometerplus.zlibrary.core.image.ZLImage;
+import org.geometerplus.zlibrary.core.image.ZLImageProxy;
+import org.geometerplus.zlibrary.core.language.Language;
+import org.geometerplus.zlibrary.core.language.ZLLanguageUtil;
+import org.geometerplus.zlibrary.core.resources.ZLResource;
+import org.geometerplus.zlibrary.ui.android.image.ZLAndroidImageData;
+import org.geometerplus.zlibrary.ui.android.image.ZLAndroidImageManager;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -32,28 +57,12 @@ import android.text.method.LinkMovementMethod;
 import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.Window;
-import android.widget.*;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
-import org.geometerplus.zlibrary.core.filesystem.ZLPhysicalFile;
-import org.geometerplus.zlibrary.core.image.ZLImage;
-import org.geometerplus.zlibrary.core.image.ZLImageProxy;
-import org.geometerplus.zlibrary.core.language.Language;
-import org.geometerplus.zlibrary.core.language.ZLLanguageUtil;
-import org.geometerplus.zlibrary.core.resources.ZLResource;
-
-import org.geometerplus.zlibrary.ui.android.R;
-import org.geometerplus.zlibrary.ui.android.image.ZLAndroidImageData;
-import org.geometerplus.zlibrary.ui.android.image.ZLAndroidImageManager;
-
-import org.geometerplus.fbreader.book.*;
-import org.geometerplus.fbreader.network.HtmlUtil;
-
-import org.geometerplus.android.fbreader.FBReader;
-import org.geometerplus.android.fbreader.OrientationUtil;
-import org.geometerplus.android.fbreader.api.FBReaderIntents;
-import org.geometerplus.android.fbreader.libraryService.BookCollectionShadow;
-import org.geometerplus.android.fbreader.preferences.EditBookInfoActivity;
-import org.geometerplus.android.fbreader.util.AndroidImageSynchronizer;
+import com.cmmobi.reader.R;
 
 public class BookInfoActivity extends Activity implements IBookCollection.Listener {
 	private static final boolean ENABLE_EXTENDED_FILE_INFO = false;

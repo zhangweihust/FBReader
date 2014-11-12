@@ -23,22 +23,26 @@ import java.lang.reflect.Field;
 import java.util.LinkedList;
 import java.util.List;
 
-import android.app.ListActivity;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.os.Build;
-import android.os.Bundle;
-import android.widget.*;
-import android.view.*;
-
+import org.geometerplus.android.util.PackageUtil;
+import org.geometerplus.android.util.ViewUtil;
 import org.geometerplus.zlibrary.core.filesystem.ZLFile;
 import org.geometerplus.zlibrary.core.resources.ZLResource;
 import org.geometerplus.zlibrary.core.xml.ZLStringMap;
 import org.geometerplus.zlibrary.core.xml.ZLXMLReaderAdapter;
-import org.geometerplus.zlibrary.ui.android.R;
 
-import org.geometerplus.android.util.PackageUtil;
-import org.geometerplus.android.util.ViewUtil;
+import android.app.ListActivity;
+import android.content.pm.PackageManager;
+import android.os.Build;
+import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.cmmobi.reader.R;
 
 public class PluginListActivity extends ListActivity {
 	private final ZLResource myResource = ZLResource.resource("plugins");

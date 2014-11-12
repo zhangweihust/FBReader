@@ -19,22 +19,33 @@
 
 package org.geometerplus.android.fbreader.library;
 
-import android.text.Html;
-import android.view.*;
-import android.widget.*;
-
-import org.geometerplus.zlibrary.core.filesystem.ZLFile;
-
-import org.geometerplus.zlibrary.ui.android.R;
-
-import org.geometerplus.fbreader.library.*;
-import org.geometerplus.fbreader.book.Book;
-
+import org.geometerplus.android.fbreader.covers.CoverManager;
 import org.geometerplus.android.fbreader.tree.TreeActivity;
 import org.geometerplus.android.fbreader.tree.TreeAdapter;
-import org.geometerplus.android.fbreader.covers.CoverManager;
-
 import org.geometerplus.android.util.ViewUtil;
+import org.geometerplus.fbreader.book.Book;
+import org.geometerplus.fbreader.library.AuthorListTree;
+import org.geometerplus.fbreader.library.AuthorTree;
+import org.geometerplus.fbreader.library.FavoritesTree;
+import org.geometerplus.fbreader.library.FileFirstLevelTree;
+import org.geometerplus.fbreader.library.FileTree;
+import org.geometerplus.fbreader.library.LibraryTree;
+import org.geometerplus.fbreader.library.RecentBooksTree;
+import org.geometerplus.fbreader.library.SearchResultsTree;
+import org.geometerplus.fbreader.library.SyncTree;
+import org.geometerplus.fbreader.library.TagListTree;
+import org.geometerplus.fbreader.library.TagTree;
+import org.geometerplus.fbreader.library.TitleListTree;
+import org.geometerplus.zlibrary.core.filesystem.ZLFile;
+
+import android.text.Html;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.cmmobi.reader.R;
 
 class LibraryTreeAdapter extends TreeAdapter {
 	private CoverManager myCoverManager;

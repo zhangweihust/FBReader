@@ -22,16 +22,18 @@ package org.geometerplus.android.fbreader.network.auth;
 import java.net.URI;
 import java.util.Map;
 
-import android.app.*;
+import org.geometerplus.zlibrary.core.resources.ZLResource;
+
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.app.Service;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v4.app.NotificationCompat;
-import android.text.TextUtils;
 
-import org.geometerplus.zlibrary.core.resources.ZLResource;
-
-import org.geometerplus.zlibrary.ui.android.R;
+import com.cmmobi.reader.R;
 
 public class ServiceNetworkContext extends AndroidNetworkContext {
 	private final Service myService;

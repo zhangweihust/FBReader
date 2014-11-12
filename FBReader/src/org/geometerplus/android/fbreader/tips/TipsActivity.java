@@ -19,17 +19,19 @@
 
 package org.geometerplus.android.fbreader.tips;
 
+import org.geometerplus.fbreader.tips.Tip;
+import org.geometerplus.fbreader.tips.TipsManager;
+import org.geometerplus.zlibrary.core.resources.ZLResource;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.text.method.LinkMovementMethod;
 import android.view.View;
-import android.widget.*;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.TextView;
 
-import org.geometerplus.zlibrary.core.resources.ZLResource;
-
-import org.geometerplus.zlibrary.ui.android.R;
-
-import org.geometerplus.fbreader.tips.*;
+import com.cmmobi.reader.R;
 
 public class TipsActivity extends Activity {
 	public static final String INITIALIZE_ACTION = "android.fbreader.action.tips.INITIALIZE";

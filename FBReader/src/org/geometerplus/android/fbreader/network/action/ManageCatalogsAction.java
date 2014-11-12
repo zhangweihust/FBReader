@@ -21,17 +21,18 @@ package org.geometerplus.android.fbreader.network.action;
 
 import java.util.ArrayList;
 
-import android.app.Activity;
-import android.content.Intent;
-
-import org.geometerplus.fbreader.network.tree.RootTree;
-import org.geometerplus.fbreader.network.tree.ManageCatalogsItemTree;
-import org.geometerplus.fbreader.network.NetworkTree;
-import org.geometerplus.fbreader.network.NetworkLibrary;
-import org.geometerplus.zlibrary.ui.android.R;
 import org.geometerplus.android.fbreader.OrientationUtil;
 import org.geometerplus.android.fbreader.network.CatalogManagerActivity;
 import org.geometerplus.android.fbreader.network.NetworkLibraryActivity;
+import org.geometerplus.fbreader.network.NetworkLibrary;
+import org.geometerplus.fbreader.network.NetworkTree;
+import org.geometerplus.fbreader.network.tree.ManageCatalogsItemTree;
+import org.geometerplus.fbreader.network.tree.RootTree;
+
+import android.app.Activity;
+import android.content.Intent;
+
+import com.cmmobi.reader.R;
 
 public class ManageCatalogsAction extends RootAction {
 	public ManageCatalogsAction(Activity activity) {

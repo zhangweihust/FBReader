@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest
 		xmlns:android="http://schemas.android.com/apk/res/android"
-		package="org.geometerplus.zlibrary.ui.android"
+		package="com.cmmobi.reader"
 		android:versionCode="2015310"
 		android:versionName="2.2 beta 3"
 		android:installLocation="auto"
 >
+<!-- package="org.geometerplus.zlibrary.ui.android" -->
 	<uses-sdk
 			android:minSdkVersion="5"
 			android:maxSdkVersion="10"

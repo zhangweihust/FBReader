@@ -19,18 +19,17 @@
 
 package org.geometerplus.android.fbreader.preferences;
 
+import org.geometerplus.zlibrary.core.resources.ZLResource;
+import org.geometerplus.zlibrary.core.util.ZLColor;
+import org.geometerplus.zlibrary.ui.android.util.ZLAndroidColorUtil;
+
+import yuku.ambilwarna.AmbilWarnaDialog;
 import android.content.Context;
 import android.preference.Preference;
 import android.view.View;
 import android.widget.TextView;
 
-import yuku.ambilwarna.AmbilWarnaDialog;
-
-import org.geometerplus.zlibrary.core.resources.ZLResource;
-import org.geometerplus.zlibrary.core.util.ZLColor;
-
-import org.geometerplus.zlibrary.ui.android.R;
-import org.geometerplus.zlibrary.ui.android.util.ZLAndroidColorUtil;
+import com.cmmobi.reader.R;
 
 public abstract class ColorPreference extends Preference {
 	protected ColorPreference(Context context) {

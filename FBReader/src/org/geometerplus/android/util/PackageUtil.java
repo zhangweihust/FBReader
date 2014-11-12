@@ -21,23 +21,25 @@ package org.geometerplus.android.util;
 
 import java.util.Map;
 
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.content.ActivityNotFoundException;
-import android.content.pm.*;
-import android.net.Uri;
-import android.telephony.TelephonyManager;
-import android.view.View;
-import android.widget.TextView;
-import android.widget.CheckBox;
-
 import org.geometerplus.zlibrary.core.options.ZLBooleanOption;
 import org.geometerplus.zlibrary.core.resources.ZLResource;
 
-import org.geometerplus.zlibrary.ui.android.R;
+import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.ActivityNotFoundException;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.pm.ActivityInfo;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
+import android.net.Uri;
+import android.telephony.TelephonyManager;
+import android.view.View;
+import android.widget.CheckBox;
+import android.widget.TextView;
+
+import com.cmmobi.reader.R;
 
 public abstract class PackageUtil {
 	private static Uri marketUri(String pkg) {

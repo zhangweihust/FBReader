@@ -19,15 +19,22 @@
 
 package org.geometerplus.android.fbreader;
 
-import android.animation.*;
+import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.annotation.TargetApi;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Build;
-import android.view.*;
-import android.widget.*;
+import android.view.LayoutInflater;
+import android.view.MotionEvent;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 
-import org.geometerplus.zlibrary.ui.android.R;
+import com.cmmobi.reader.R;
 
 public class PopupWindow extends LinearLayout {
 	public static enum Location {

@@ -19,6 +19,12 @@
 
 package org.geometerplus.android.fbreader.preferences.background;
 
+import org.geometerplus.fbreader.fbreader.options.ColorProfile;
+import org.geometerplus.zlibrary.core.filesystem.ZLFile;
+import org.geometerplus.zlibrary.core.resources.ZLResource;
+import org.geometerplus.zlibrary.core.util.ZLColor;
+import org.geometerplus.zlibrary.ui.android.util.ZLAndroidColorUtil;
+
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -27,14 +33,7 @@ import android.preference.Preference;
 import android.view.View;
 import android.widget.TextView;
 
-import org.geometerplus.zlibrary.core.filesystem.ZLFile;
-import org.geometerplus.zlibrary.core.options.ZLStringOption;
-import org.geometerplus.zlibrary.core.resources.ZLResource;
-import org.geometerplus.zlibrary.core.util.ZLColor;
-import org.geometerplus.zlibrary.ui.android.R;
-import org.geometerplus.zlibrary.ui.android.util.ZLAndroidColorUtil;
-
-import org.geometerplus.fbreader.fbreader.options.ColorProfile;
+import com.cmmobi.reader.R;
 
 public class BackgroundPreference extends Preference {
 	static final String VALUE_KEY = "fbreader.background.value";

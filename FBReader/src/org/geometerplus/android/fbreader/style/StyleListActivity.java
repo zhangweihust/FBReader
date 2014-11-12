@@ -22,25 +22,32 @@ package org.geometerplus.android.fbreader.style;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.geometerplus.android.fbreader.api.FBReaderIntents;
+import org.geometerplus.android.fbreader.libraryService.BookCollectionShadow;
+import org.geometerplus.android.util.ViewUtil;
+import org.geometerplus.fbreader.book.Book;
+import org.geometerplus.fbreader.book.BookEvent;
+import org.geometerplus.fbreader.book.Bookmark;
+import org.geometerplus.fbreader.book.HighlightingStyle;
+import org.geometerplus.fbreader.book.IBookCollection;
+import org.geometerplus.zlibrary.core.resources.ZLResource;
+import org.geometerplus.zlibrary.core.util.ZLColor;
+import org.geometerplus.zlibrary.ui.android.util.ZLAndroidColorUtil;
+
+import yuku.ambilwarna.widget.AmbilWarnaPrefWidgetView;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.*;
-import android.view.*;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.view.Window;
+import android.widget.AdapterView;
+import android.widget.BaseAdapter;
+import android.widget.Button;
+import android.widget.TextView;
 
-import yuku.ambilwarna.widget.AmbilWarnaPrefWidgetView;
-
-import org.geometerplus.zlibrary.core.resources.ZLResource;
-import org.geometerplus.zlibrary.core.util.ZLColor;
-import org.geometerplus.zlibrary.ui.android.R;
-import org.geometerplus.zlibrary.ui.android.util.ZLAndroidColorUtil;
-
-import org.geometerplus.fbreader.book.*;
-
-import org.geometerplus.android.fbreader.api.FBReaderIntents;
-import org.geometerplus.android.fbreader.libraryService.BookCollectionShadow;
-
-import org.geometerplus.android.util.ViewUtil;
+import com.cmmobi.reader.R;
 
 public class StyleListActivity extends ListActivity implements IBookCollection.Listener {
 	public static final String EXISTING_BOOKMARK_KEY = "existing.bookmark";

@@ -19,6 +19,10 @@
 
 package org.geometerplus.android.fbreader.error;
 
+import org.geometerplus.zlibrary.core.resources.ZLResource;
+import org.geometerplus.zlibrary.ui.android.error.ErrorKeys;
+import org.geometerplus.zlibrary.ui.android.error.ErrorUtil;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -26,11 +30,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import org.geometerplus.zlibrary.core.resources.ZLResource;
-
-import org.geometerplus.zlibrary.ui.android.R;
-import org.geometerplus.zlibrary.ui.android.error.ErrorKeys;
-import org.geometerplus.zlibrary.ui.android.error.ErrorUtil;
+import com.cmmobi.reader.R;
 
 public class BookReadingErrorActivity extends Activity implements ErrorKeys {
 	@Override

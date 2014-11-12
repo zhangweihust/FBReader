@@ -19,22 +19,25 @@
 
 package org.geometerplus.android.fbreader.network;
 
-import android.view.*;
-import android.widget.ImageView;
-import android.widget.TextView;
-
-import org.geometerplus.zlibrary.ui.android.R;
-
-import org.geometerplus.fbreader.network.*;
-import org.geometerplus.fbreader.network.tree.*;
-
+import org.geometerplus.android.fbreader.covers.CoverManager;
+import org.geometerplus.android.fbreader.network.action.NetworkBookActions;
 import org.geometerplus.android.fbreader.tree.TreeActivity;
 import org.geometerplus.android.fbreader.tree.TreeAdapter;
-import org.geometerplus.android.fbreader.covers.CoverManager;
-
-import org.geometerplus.android.fbreader.network.action.NetworkBookActions;
-
 import org.geometerplus.android.util.ViewUtil;
+import org.geometerplus.fbreader.network.NetworkTree;
+import org.geometerplus.fbreader.network.tree.AddCustomCatalogItemTree;
+import org.geometerplus.fbreader.network.tree.BasketCatalogTree;
+import org.geometerplus.fbreader.network.tree.ManageCatalogsItemTree;
+import org.geometerplus.fbreader.network.tree.NetworkBookTree;
+import org.geometerplus.fbreader.network.tree.RecentCatalogListTree;
+import org.geometerplus.fbreader.network.tree.SearchCatalogTree;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+
+import com.cmmobi.reader.R;
 
 class NetworkLibraryAdapter extends TreeAdapter {
 	NetworkLibraryAdapter(NetworkLibraryActivity activity) {

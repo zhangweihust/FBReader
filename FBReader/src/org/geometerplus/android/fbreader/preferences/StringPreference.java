@@ -21,6 +21,9 @@ package org.geometerplus.android.fbreader.preferences;
 
 import java.util.regex.Pattern;
 
+import org.geometerplus.zlibrary.core.options.ZLStringOption;
+import org.geometerplus.zlibrary.core.resources.ZLResource;
+
 import android.app.AlertDialog;
 import android.content.Context;
 import android.os.Bundle;
@@ -28,11 +31,11 @@ import android.preference.DialogPreference;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
-import android.widget.*;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
-import org.geometerplus.zlibrary.core.options.ZLStringOption;
-import org.geometerplus.zlibrary.core.resources.ZLResource;
-import org.geometerplus.zlibrary.ui.android.R;
+import com.cmmobi.reader.R;
 
 public class StringPreference extends DialogPreference {
 	public static class Constraint {
